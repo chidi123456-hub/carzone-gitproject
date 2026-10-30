@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'carzone_db',
+        'USER': 'postgres',
+        'PASSWORD': 'FBASE@105ce',
+        'HOST': 'localhost',
     }
 }
 
@@ -120,6 +123,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "carzone" / "static",
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Media settings
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = '/media/'
 
 
 # Email
